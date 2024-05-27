@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/calculator" rel="stylesheet">
+    <link rel="stylesheet" href="C:\Users\ragav\Desktop\Selvaragavan Calculator\style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <input type="text" placeholder="0" id="display-output">
+            <button onclick="display('7')">7</button>
+            <button onclick="display('8')">8</button>
+            <button onclick="display('9')">9</button>
+            <button onclick="Clear()" id="clearButton">AC</button>
+            <button onclick="del()" id="delButton">DEL</button>
+            <button onclick="display('4')">4</button>
+            <button onclick="display('5')">5</button>
+            <button onclick="display('6')">6</button>
+            <button onclick="display('*')" id="operator">*</button>
+            <button onclick="display('/')" id="operator">/</button>
+            <button onclick="display('1')">1</button>
+            <button onclick="display('2')">2</button>
+            <button onclick="display('3')">3</button>
+            <button onclick="display('+')" id="operator">+</button>
+            <button onclick="display('-')" id="operator">-</button>
+            <button onclick="display('0')">0</button>
+            <button onclick="displayDoubleZero()">00</button>
+            <button onclick="calculateSquareRoot()" id="root">√</button>
+            <button onclick="display('.')" id="operator">.</button>
+            <button onclick="Calculate()" id="operator">=</button>
+        </div>
+    </div>
+
+    <script>
+        let outputScreen = document.getElementById("display-output");
+
+        function display(num){
+            outputScreen.value+=num;
+        }
+        function Calculate(){
+            try{
+                outputScreen.value=eval(outputScreen.value);
+            }
+            catch(error)
+            {
+                alert("Invalid")
+            }
+        }
+        function Clear(){
+            outputScreen.value="";
+        }
+        function del(){
+            outputScreen.value=outputScreen.value.slice(0,-1);
+        }
+        function displayDoubleZero() {
+            const currentValue = outputScreen.value;
+
+            if (currentValue === "0") {
+                return;
+            }
+
+            if (currentValue !== "") {
+                outputScreen.value += "00";
+            }
+        }
+        function calculateSquareRoot() {
+            const currentValue = outputScreen.value;
+
+            if (isNaN(currentValue)) {
+                alert("Invalid Input! Please enter a number.");
+                return;
+            }
+
+            const number = parseFloat(currentValue);
+            const squareRoot = Math.sqrt(number);
+
+            if (!isNaN(squareRoot)) {
+                outputScreen.value = squareRoot;
+            } else {
+                alert("Cannot calculate square root of a negative number.");
+            }
+        }
+
+    </script>
+</body>
+</html>

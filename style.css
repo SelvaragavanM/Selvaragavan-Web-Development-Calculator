@@ -1,0 +1,100 @@
+body {
+    box-sizing: border-box;
+	background-color: #424242;
+	font-family: Tahoma;
+}
+
+.container {
+    height: 100vh;
+	display: flex;
+	justify-content: center;
+    align-items: center;	
+}
+
+.calculator{
+    background-color: #BABABA;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: inset 5px 5px 12px #ffffff,
+                      5px 5px 12px rgba(0, 0, 0, .16);
+    display: grid;
+    grid-template-columns: repeat(5,70px);
+}
+
+input{
+    grid-column: span 5;
+    height: 40px;
+    width: 302px;
+    background-color: #ffffff;
+    box-shadow: inset -5px -5px 12px #ffffff,
+                inset  5px  5px 12px rgba(0, 0, 0, .16);
+    border:none;
+    border-radius: 7px;
+    color: rgb(0, 0, 0);
+    font-size: 28px;
+    text-align: end;
+    margin:auto;
+    margin-top: 17px;
+    margin-bottom: 19px;
+    padding: 10px;   
+}
+
+button{
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 4px;
+    color: #FFF;
+    background-color: #434343;
+	border-top: 2px solid #C1C1C1;
+	border-right: 2px solid #C1C1C1;
+	border-bottom: 2px solid #181818;
+	border-left: 2px solid #181818;
+	box-shadow: 0px 0px 2px #030303, inset 0px -20px 1px #2E2E2E;
+    margin: 3px;
+    font-size: 20px;
+}
+
+#clearButton {
+	color: #FFF;
+	text-shadow: -1px -1px 0px #44006F;
+	background-color: #D20000;
+	border-top: 2px solid #FF8484;
+	border-right: 2px solid #FF8484;
+	border-bottom: 2px solid #800000;
+	border-left: 2px solid #800000;
+	box-shadow: 0px 0px 2px #030303, inset 0px -20px 1px #B00000;
+}
+
+#delButton {
+	color: #FFF;
+	text-shadow: -1px -1px 0px #44006F;
+	background-color: #0b8000;
+	border-top: 2px solid #11bb02;
+	border-right: 2px solid #11bb02;
+	border-bottom: 2px solid #008037;
+	border-left: 2px solid #00800f;
+	box-shadow: 0px 0px 2px #030303, inset 0px -20px 1px #0b8000;
+}
+
+#operator{
+    color: #FFF;
+	text-shadow: -1px -1px 0px #44006F;
+	background-color: #fb9b16;
+	box-shadow: 0px 0px 2px #ffa500, inset 0px -20px 1px #ff8912;
+	border-top: 2px solid #fb9145;
+	border-right: 2px solid #fb9145;
+	border-bottom: 2px solid #fc9125;
+	border-left: 2px solid #fc9125;
+}
+
+#root{
+    background-color: #ff005a;
+	box-shadow: 0px 0px 2px #ff005a, inset 0px -20px 1px #ff005a;
+	border-top: 2px solid #fb79a7;
+	border-right: 2px solid #fb79a7;
+	border-bottom: 2px solid #ff005a;
+	border-left: 2px solid #ff005a;
+}
+
+
